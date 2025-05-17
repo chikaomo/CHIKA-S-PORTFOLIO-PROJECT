@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PORTFOLIO</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div id="header">
+  <div class="container">
+    <nav>
+      <img src="logo-Photoroom.png" class="logo">
+      <ul id="small-font-color">
+        <li><a href="#">Home</a></li>
+        <li><a href="skills.html">Skills</a></li>
+        <li><a href="portfolio page.html">Portfolio</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-text">
+      <p>WILDLIFE PHOTOGRAPHER</p>
+      <h1>Meet <span>Chika</span><br> - A Passionate Wildlife Photographer</h1>
+    </div>
+  </div>
+</div> 
+<!----------about------------>
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="user.jpg">
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>Where nature and photography collide</p>  <!--continue about me info-->
+
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('passion')">Passion</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+        <div class="tab-contents active-tab" id="passion">
+          <ul>
+            <li><span>Embracing Nature</span><br>My passion for wildlife stems from a deep fascination with the beauty, diversity, and resilience of nature. From a young age, I have been captivated by the intricate behaviors of animals, the delicate balance of ecosystems, and the urgent need for conservation. Whether observing birds in flight, tracking animal footprints, or learning about endangered species, I feel a profound connection to the natural world. This passion drives me to advocate for wildlife protection, educate others about biodiversity, and contribute to efforts that ensure future generations can experience the wonder of Earth's incredible creatures.</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2016-Date</span><br>Wildlife Photograper at NatGeoWild.</li>
+            <li><span>2021-Date</span><br>Head of Photography, Harvard School of Animal Science.</li>
+          </ul>
+        </div>
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2024</span><br>MBA in Marine Biology from Harvard School of Animal Science.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+
+  function opentab(tabname) {
+    for(tablink of tablinks) {
+      tablink.classList.remove("active-link")
+    }
+
+    for(tabcontent of tabcontents) {
+      tabcontent.classList.remove("active-tab")
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+</script>
+
+</body>
+</html>
